@@ -25,14 +25,14 @@ export default defineConfig({
       name: 'chromium-xs',
       use: {
         ...devices['Desktop Chrome'],
-        viewport: { width: 320, height: 700 },
+        viewport: { width: 480, height: 700 },
       },
     },
     {
       name: 'chromium-md',
       use: {
         ...devices['Desktop Chrome'],
-        viewport: { width: 500, height: 1000 },
+        viewport: { width: 700, height: 1000 },
       },
     },
     {
