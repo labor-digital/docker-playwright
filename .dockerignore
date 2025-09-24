@@ -1,0 +1,5 @@
+.settings
+.idea
+
+node20/app/node_modules
+node20/app/package-lock.json
