@@ -6,9 +6,9 @@ export default defineConfig({
   // testIgnore: '*test-assets',
   testMatch: '**/*.spec.ts',
   fullyParallel: true,
-  forbidOnly: false,
+  forbidOnly: true,
   retries: 0,
-  workers: 1,
+  workers: 10,
   reporter: [
     ['list'],
     ['html', { open: 'never', outputFolder: process.env.TEST_ROOT_DIR + '/tests/test-reports' }],
