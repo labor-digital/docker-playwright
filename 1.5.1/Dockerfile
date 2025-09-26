@@ -13,3 +13,5 @@ RUN npm install
 
 # Now add all the other files to improve docker layer caching
 ADD app/. /app
+RUN chmod +x /app/test.sh
+RUN chmod +x /app/test-update.sh

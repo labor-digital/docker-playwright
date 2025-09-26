@@ -3,15 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "npx playwright test",
-    "test-update": "npx playwright test --update-snapshots"
+    "test": "./test.sh",
+    "test-update": "./test-update.sh"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
-  "devDependencies": {
-    "@playwright/test": "^1.55.1",
-    "@types/node": "^24.5.2"
-  }
+  "description": ""
 }
