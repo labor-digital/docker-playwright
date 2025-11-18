@@ -26,13 +26,25 @@ jobs:
         uses: docker/setup-buildx-action@v3
 
       # Base Image
-      - name: Build and push 1.5.1
+      - name: Build and push 1.55.1
         uses: docker/build-push-action@v5
         with:
-          context: ./1.5.1/.
+          context: ./1.55.1/.
           push: true
-          tags: labordigital/playwright:1.5.1
+          tags: labordigital/playwright:1.55.1
           platforms: linux/amd64,linux/arm64
-          file: ./1.5.1/Dockerfile
+          file: ./1.55.1/Dockerfile
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      # Base Image
+      - name: Build and push 1.56.1
+        uses: docker/build-push-action@v5
+        with:
+          context: ./1.56.1/.
+          push: true
+          tags: labordigital/playwright:1.56.1
+          platforms: linux/amd64,linux/arm64
+          file: ./1.56.1/Dockerfile
           cache-from: type=gha
           cache-to: type=gha,mode=max
