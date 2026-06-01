@@ -60,3 +60,15 @@ jobs:
           file: ./1.57.0/Dockerfile
           cache-from: type=gha
           cache-to: type=gha,mode=max
+
+      # Base Image
+      - name: Build and push 1.60.0
+        uses: docker/build-push-action@v5
+        with:
+          context: ./1.60.0/.
+          push: true
+          tags: labordigital/playwright:1.60.0
+          platforms: linux/amd64,linux/arm64
+          file: ./1.60.0/Dockerfile
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
