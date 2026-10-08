@@ -33,7 +33,7 @@ jobs:
           push: true
           tags: labordigital/playwright:1.64.0
           platforms: linux/amd64,linux/arm64
-          file: ./1.63.0/Dockerfile
+          file: ./1.64.0/Dockerfile
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
