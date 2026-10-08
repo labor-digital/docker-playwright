@@ -85,6 +85,18 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
+      # Base Image (Chromium only)
+      - name: Build and push 1.57.0-chromium
+        uses: docker/build-push-action@v5
+        with:
+          context: ./1.57.0-chromium/.
+          push: true
+          tags: labordigital/playwright:1.57.0-chromium
+          platforms: linux/amd64,linux/arm64
+          file: ./1.57.0-chromium/Dockerfile
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
       # Base Image
       - name: Build and push 1.56.1
         uses: docker/build-push-action@v5
